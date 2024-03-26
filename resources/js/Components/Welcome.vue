@@ -100,5 +100,8 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue';
                 </p>
             </div>
         </div>
+        <button v-if="$page.props.user.permissions.includes('create roles')">Create Roles</button>
+        <button v-if="$page.props.user.permissions.includes('create users')">Create Users</button>
+        <button v-if="$page.props.user.permissions.includes('create posts')">Create Post</button>
     </div>
 </template>

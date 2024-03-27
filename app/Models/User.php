@@ -61,10 +61,10 @@ class User extends Authenticatable
     }
 
     public function posts() {
-        return $this->hasMany(Post::class);
+        return $this->hasMany(Post::class, 'created_by_user_id');
     }
 
     public function tasks() {
-        return $this->hasMany(PostTask::class);
+        return $this->hasMany(PostTask::class, 'assigned_to_user_id');
     }
 }

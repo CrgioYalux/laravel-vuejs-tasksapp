@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('entity_id');
             $table->text('body')->max(500);
             $table->longText('attachment')->charset('binary')->nullable();
             $table->unsignedBigInteger('created_by_user_id');

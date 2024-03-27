@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('post_id');
             $table->string('title', 250);
             $table->unsignedBigInteger('assigned_to_user_id');
+            $table->boolean('finished');
             $table->timestamps();
 
             $table->foreign('post_id')
